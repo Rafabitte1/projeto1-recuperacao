@@ -1,10 +1,5 @@
 <style>
-template{
-font-size: larger;
-margin-top: 5px;
-display: flexbox;
-height: 100px;
-}
+
 
 form {
   max-width: 400px;
@@ -15,6 +10,8 @@ label {
   display: block;
   margin-bottom: 14px;
   font-weight: bold;
+  font: center;
+  border: #dd2727;
 }
 
 
@@ -55,8 +52,16 @@ input[type="submit"] {
 
 br {
   margin-top: 10px;
-  margin-bottom: 10px;
-}</style>
+  margin-bottom: 10px
+}
+button{
+text-align: left;
+  background-color: chartreuse;
+  padding: 100px;
+border: #fff;
+}
+
+</style>
 
 
 <script>function isValidDate(birthdate) {
@@ -142,5 +147,6 @@ br {
   <label for="hobbies">Hobbies:</label>
   <input type="text" id="hobbies" name="hobbies"><br><br>
   <label for="linguagens">linguagens de progromação</label>
-  <input type="text" id="linguagens" name="linguagens">
+  <input type="text" id="linguagens" name="linguagens"><br>
+  <button type="button" id="salva" name="salvar">Salvar</button>
 </template>
