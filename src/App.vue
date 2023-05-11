@@ -1,65 +1,75 @@
 <style>
-
-
 form {
-  max-width: 400px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 label {
-  display: block;
-  margin-bottom: 14px;
-  font-weight: bold;
-  font: center;
-  border: #dd2727;
-}
-
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
+  font-size: 1.2rem;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border: 2px solid #ccc;
   border-radius: 4px;
-}
-
-select {
-  height: 40px;
-}
-
-textarea {
-  height: 100px;
-}
-
-
-input[type="submit"] {
-  display: block;
+  font-size: 1.2rem;
   width: 100%;
-  padding: 100px;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+input[type="date"] {
+  width: 100%;
+}
+
+textarea {
+  height: 150px;
+}
+
+:required {
+  border-color: red;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:invalid + span::before {
+  content: "⚠ ";
+  color: red;
+  font-size: 1.2rem;
+}
+
+:invalid:focus + span::before {
+  content: "✖ ";
+  color: red;
+  font-size: 1.2rem;
 }
 
 
-br {
-  margin-top: 10px;
-  margin-bottom: 10px
-}
-button{
-text-align: left;
-  background-color: chartreuse;
-  padding: 100px;
-border: #fff;
-}
 
 </style>
 
@@ -82,7 +92,8 @@ border: #fff;
   if (day < 1 || day > 31) {
     return false;
   }
-  return true;}</script>
+  return true;}
+  </script>
 
 
   <template>
@@ -147,6 +158,7 @@ border: #fff;
   <label for="hobbies">Hobbies:</label>
   <input type="text" id="hobbies" name="hobbies"><br><br>
   <label for="linguagens">linguagens de progromação</label>
-  <input type="text" id="linguagens" name="linguagens"><br>
+  <input type="text" id="linguagens" name="linguagens"><br> <label for="biografia">Biografia:</label>
+<textarea id="biografia" name="biografia"></textarea><br><br>
   <button type="button" id="salva" name="salvar">Salvar</button>
 </template>
