@@ -160,5 +160,5 @@ textarea {
   <label for="linguagens">linguagens de progromação</label>
   <input type="text" id="linguagens" name="linguagens"><br> <label for="biografia">Biografia:</label>
 <textarea id="biografia" name="biografia"></textarea><br><br>
-  <button type="button" id="salva" name="salvar">Salvar</button>
+  <button type="button" id="salva" name="salvar" >Salvar</button>
 </template>
